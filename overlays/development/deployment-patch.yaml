@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 1  # Fewer replicas for development
+  template:
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:dev  # Use a different image tag for development
